@@ -1,0 +1,127 @@
+System Requirements specification for Garden Corner
+version .7
+
+Bryan Becerra
+
+2-22-2026
+
+1. Introduction
+1.1 Purpose
+This document describes the software requirements for the Garden Corner, a website designed
+to post about my personal garden progress, post my garden pictures, and include a page for
+my Garden game. This specification cover version 1.0 of the website.
+
+1.2 Document Conventions 
+• Functional requirements are listed with the prefix REQ-#. 
+
+1.3 Intended Audience and Reading Suggestions 
+This document is intended for: 
+• Developers: to understand functionality and constraints 
+• Project Managers: for planning and progress tracking
+Begin reading from the overview and overall description before diving into system 
+features.
+
+1.4 Product Scope 
+The Web-Based Interactive website enables people to view my garden via an engaging 
+a Vanilla Javascript web interface. There cannot be a backend due to the website being posted onto
+neocites and, the limitations of that web hosting
+
+1.5 References
+• IEEE SRS and SDS templates   
+• Garden Corner SRS Version .7 
+• https://fonts.google.com/specimen/Orbitron
+• https://fonts.google.com/specimen/Chewy
+• Web Content Accessibility Guidelines 2.1
+
+2. Overall Description 
+2.1 Product Perspective 
+This website featues webpage for my game which has
+already been made with Go and needs to be compiled to WASM and served onto the webpage.
+The system combines interactive multimedia capabilities (text, audio), and engaging visual feedback. The application is fully 
+browser-based, requiring no installation and accessible from any device with a modern web 
+browser. 
+
+2.2 Product Functions 
+• Load and display pictures 
+• Have a page dedicated to the Happy Garden Game which can be playable upon the web browser
+
+2.3 User Classes and Characteristics 
+• Random Young people on neocities: Primary users, minimal reading required 
+• Web nerds: Might be interested in exploring "old web" 
+• Developers: Maintain and extend the application 
+
+2.4 Operating Environment 
+• Web browser 
+
+2.5 Design and Implementation Constraints 
+• Must use the file types approved to be used by Neocities 
+• It must feel mondern yet, still be stylistic of old Web
+• Stable network is required 
+
+2.6 Assumptions and Dependencies 
+• Internet is available
+• Users have basic familiarity with web browsing operation
+
+3. External Interface Requirements 
+3.1 User Interfaces Overview 
+The interface shall be intuitive and require no instructions for first-time users.
+
+3.2 Hardware Interfaces  
+• Display: Responsive rendering across various screen sizes and resolutions 
+
+3.3 Software Interfaces 
+• Media file storage for videos, images, and audio.
+
+4. System Features
+4.1  Webpage
+Description: The website shall serve 4 webpages  
+• REQ-1: The webpages shall provide encouraging visual feedback and animations 
+• REQ-2: the webpages' font should be no smaller than 16px.
+• REQ-3: It must have the colors #d55e0f ; #71ab23 ; #0689e4
+• REQ-4: It must usse Frutiger as the font somewhere on the webpage plus, Orbitron or Chewy as title/subtitle options
+• REQ-5: It must have a homepage, about, gallery, and Games.
+• REQ-6: Must feature Aero Frutiger aesthetics while still being mondern.
+• REQ‑7: Must support lightbox view
+• REQ-8: Images shall be displayed in a grid layout
+• REQ-10: Each image shall support a caption and date.
+• REQ-11: All images must include alt text.
+• REQ-12: If WASM game fails to load, display retry button.
+• REQ-13: No external frameworks.
+• REQ-14: sepereate CSS file
+
+4.2 Navigation
+REQ-15: A navigation bar shall appear on all pages.
+REQ-16: Navigation shall include links to Home, About, Gallery, Games.
+REQ-17: Active page shall be visually highlighted.
+
+4.3 Responsive Design
+REQ-18: Layout shall switch to single-column below 768px width.
+REQ-19: Navigation shall collapse into a hamburger menu below 768px.
+
+4.4 Seach Engine
+REQ-20: Must be optimized for a high S.E.O. score
+    Each page shall include unique meta title and description.
+    All images shall include descriptive alt text.
+    Semantic HTML5 elements (header, nav, main, footer) shall be used.
+
+4.5 Clean Code
+REQ-21: All JavaScript shall be modular and avoid global variables.
+REQ-22: CSS shall use variables for important colors.
+
+4.6 Game
+REQ-23: The Happy Garden Game shall be compiled from Go to WebAssembly.
+REQ-24: The WASM file shall be loaded asynchronously.
+REQ-25: If WebAssembly is unsupported, display a compatibility message.
+
+5. Nonfunctional Requirements 
+5.1 Performance Requirement 
+• The system shall maintain responsiveness on devices with modern browsers.
+
+5.2 Safety Requirements
+• System must avoid sudden loud sounds
+
+5.4 Software Quality Attributes 
+• Usability: Designed for children; intuitive touch/voice 
+• Reliabiility: website should not crash. JavaScript errors shall be handled using try/catch where applicable.
+• Maintainability: Modular code for easy updates. every function written in JS must have atleast 3 comments explaining it minimum. 
+• Portability: Can run on various operating systems with a web browser

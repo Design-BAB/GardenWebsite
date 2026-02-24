@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden Corner | Games</title>
+  <meta name="description" content="Play the Happy Garden game on the web with WebAssembly, plus graceful fallback messaging and retry support." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="games">
+  <header class="site-header">
+    <div class="brand-wrap">
+      <h1 class="site-title">Garden Corner</h1>
+      <p class="site-subtitle">Happy Garden (WASM)</p>
+    </div>
+    <button class="hamburger" id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="gallery.html" data-nav="gallery">Gallery</a>
+      <a href="games.html" data-nav="games" class="active">Games</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Happy Garden Game</h2>
+      <p>Use arrow keys to move and space to water flowers.</p>
+      <p>This game is loaded asynchronously using WebAssembly on a static page.</p>
+    </section>
+
+    <section class="card game-shell" id="gameShell">
+      <p id="gameStatus">Preparing game loader...</p>
+      <button id="retryButton" class="cta hidden" type="button">Retry Loading Game</button>
+      <iframe id="gameFrame" class="game-frame" title="Happy Garden game" loading="lazy" src="about:blank" width="800" height="600"></iframe>
+      <p class="small-note">Game runner is served from site/game using HappyGarden.wasm.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Game build target: Go + WebAssembly.</p>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/games.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden Corner | Gallery</title>
+  <meta name="description" content="Browse Garden Corner photos in a responsive image grid with captions, dates, descriptive alt text, and lightbox viewing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="gallery">
+  <header class="site-header">
+    <div class="brand-wrap">
+      <h1 class="site-title">Garden Corner</h1>
+      <p class="site-subtitle">Garden photo timeline</p>
+    </div>
+    <button class="hamburger" id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="gallery.html" data-nav="gallery" class="active">Gallery</a>
+      <a href="games.html" data-nav="games">Games</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Gallery</h2>
+      <p>Tap or click any image to open lightbox view.</p>
+    </section>
+
+    <section class="gallery-grid" id="galleryGrid" aria-label="Garden image gallery"></section>
+
+    <dialog id="lightbox" class="lightbox" aria-label="Image lightbox">
+      <button id="lightboxClose" class="lightbox-close" aria-label="Close image viewer">×</button>
+      <img id="lightboxImage" src="" alt="" />
+      <p id="lightboxCaption"></p>
+      <p id="lightboxDate" class="lightbox-date"></p>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <p>All photos are from my personal garden updates.</p>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/gallery.js"></script>
+</body>
+</html>

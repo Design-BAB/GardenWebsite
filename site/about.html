@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden Corner | About</title>
+  <meta name="description" content="Learn about the Garden Corner project, design goals, and how this static website blends old-web style with modern responsiveness." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="about">
+  <header class="site-header">
+    <div class="brand-wrap">
+      <h1 class="site-title">Garden Corner</h1>
+      <p class="site-subtitle">About this project</p>
+    </div>
+    <button class="hamburger" id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about" class="active">About</a>
+      <a href="gallery.html" data-nav="gallery">Gallery</a>
+      <a href="games.html" data-nav="games">Games</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>What is Garden Corner?</h2>
+      <p>Garden Corner is a personal website where I document my garden progress, share photo updates, and host my Happy Garden game.</p>
+      <p>The visual design mixes the playful, glossy spirit of old web styles with clean modern layout and accessibility-friendly structure.</p>
+    </section>
+
+    <section class="feature-grid">
+      <article class="card">
+        <h3>Static Hosting First</h3>
+        <p>This project is designed to run without a backend, making it a good fit for Neocities-style hosting.</p>
+      </article>
+      <article class="card">
+        <h3>Accessibility Focus</h3>
+        <p>Semantic landmarks, keyboard-friendly interactions, and descriptive image alt text are included throughout.</p>
+      </article>
+      <article class="card">
+        <h3>Maintainable Code</h3>
+        <p>JavaScript is modular, CSS uses variables, and page logic is split into small focused files.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Thanks for visiting Garden Corner 🌼</p>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden Corner | Home</title>
+  <meta name="description" content="Welcome to Garden Corner: a modern old-web inspired site sharing garden progress, gallery updates, and the Happy Garden browser game." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="brand-wrap">
+      <h1 class="site-title">Garden Corner</h1>
+      <p class="site-subtitle">Aero Frutiger vibes with modern web flow</p>
+    </div>
+    <button class="hamburger" id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home" class="active">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="gallery.html" data-nav="gallery">Gallery</a>
+      <a href="games.html" data-nav="games">Games</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero card floating">
+      <h2>Welcome to My Happy Garden Space</h2>
+      <p>Track fresh growth, seasonal highlights, and garden wins with bright visuals and playful energy.</p>
+      <p class="encourage">Keep going — every bloom started as a tiny seed 🌱</p>
+      <a class="cta" href="gallery.html">See Latest Garden Photos</a>
+    </section>
+
+    <section class="feature-grid">
+      <article class="card">
+        <h3>Garden Progress</h3>
+        <p>Weekly snapshots show real growth milestones and care routines.</p>
+      </article>
+      <article class="card">
+        <h3>Photo Gallery</h3>
+        <p>Browse images in a responsive grid and open each image in a lightbox.</p>
+      </article>
+      <article class="card">
+        <h3>Playable Game</h3>
+        <p>Launch Happy Garden directly in your browser using WebAssembly.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Garden Corner • Built with vanilla JavaScript and semantic HTML.</p>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/site.js"></script>
+</body>
+</html>
