@@ -22,6 +22,7 @@ function createGalleryItem(photo) {
   const image = document.createElement("img");
   image.src = photo.src;
   image.alt = photo.alt;
+  image.loading = "lazy";
 
   const meta = document.createElement("div");
   meta.className = "gallery-meta";
